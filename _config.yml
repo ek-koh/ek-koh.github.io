@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Eunkyung Koh"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/images/ek-koh.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "고은경의 블로그입니다."
   location         : "Seoul"
   email            :
