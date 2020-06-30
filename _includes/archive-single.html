@@ -30,7 +30,7 @@
 
     <!-- post.date -->
     {% if post.date %}
-      <p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ post.date | date: "%B %d %Y" }}</p>
+      <p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ post.last_modified_at | date: "%B %d %Y" }}</p>
     {% endif %}
 
 
