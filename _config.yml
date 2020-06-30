@@ -26,7 +26,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "assets/images/ek-koh-logos.png" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "I'll rise like the break of dawn" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -94,8 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "Eunkyung Koh"
-  avatar           : "assets/images/ek-koh.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "고은경의 블로그입니다."
+  avatar           : "assets/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "데이터분석가를 꿈꾸는 고은경입니다."
   location         : "Seoul"
   email            :
   links:
