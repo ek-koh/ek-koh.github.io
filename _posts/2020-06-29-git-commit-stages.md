@@ -5,7 +5,7 @@ toc: true
 toc_sticky: true
 
 categories:
-  - Blog
+  - Git
 tags:
   - [Git, Basic]
 last_modified_at: 2020-06-30 17:36:29

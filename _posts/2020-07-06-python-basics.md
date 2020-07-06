@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - Python
 tags:
-  - [Python, basic, PEP]
+  - [Python, Basic, PEP]
 last_modified_at: 2020-07-06 19:50:02
 ---
 
