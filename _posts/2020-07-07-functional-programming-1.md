@@ -8,7 +8,7 @@ categories:
   - Python
 tags:
   - [Python, Function, Positional, Keyword, *, AndOr, Global, Nonlocal, Else, List Comprehension, High-order Function]
-last_modified_at: 2020-07-06 19:50:02
+last_modified_at: 2020-07-07 23:49:46
 ---
 
 ## 1. 함수 생성
@@ -277,8 +277,8 @@ add1 = partial(add, y=1)
 
 add1(3)
 # 4
-```
-
+```  
+  
 ## 기타
 ### 속도체크하기
 - `%%timeit`: 전체 셀의 실행시간을 알려줌
