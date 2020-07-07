@@ -7,8 +7,8 @@ toc_sticky: true
 categories:
   - Python
 tags:
-  - [Python, Function, Positional, Keyword, AndOr, Global, Nonlocal, Else]
-last_modified_at: 2020-07-07 23:57:21
+  - [Python, Function, Positional, Keyword, AndOr, Global, Nonlocal, Else, List Comprehension, High-order Function]
+last_modified_at: 2020-07-07 23:49:46
 ---
 
 ## 1. 함수 생성
@@ -266,7 +266,8 @@ np.add.reduce([1,2,3,4,5])
 ```
 
 ### (4) partial
-- 함수의 일부를 내 마음대로 바꿀 수 있음
+- 함수의 일부를 내 마음대로 바꿀 수 있음  
+
 ```py
 from functools import partial
 
@@ -278,7 +279,6 @@ add1 = partial(add, y=1)
 add1(3)
 # 4
 ```  
-
   
 ## 기타
 ### 속도체크하기
