@@ -8,7 +8,7 @@ categories:
   - Python
 tags:
   - [Python, Function, Comprehension, Generator, Lambda, Callables, Decorator]
-last_modified_at: 2020-07-08 16:17:50
+last_modified_at: 2020-07-08 16:29:25
 ---
 참고자료: Functional Programming in Python (by. David Mertz)
 
@@ -184,6 +184,7 @@ def outer(tt):
         return inner
     return wrapper
 ```
+
 ```py
 @outer(tt=7)
 def y(t):
