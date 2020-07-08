@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - Python
 tags:
-  - [Python, Function, Positional, Keyword, AndOr, Global, Nonlocal, Else, List Comprehension, High-order Function]
+  - [Python, Function, Positional, Keyword, AndOr, Global, Nonlocal, Else, High-order Function]
 last_modified_at: 2020-07-07 23:49:46
 ---
 
@@ -217,20 +217,7 @@ finally:
   # division by zero
   ```
 
-## 8. 리스트 컴프리헨션
-- list comprehension
-  ```py
-  a = [x+1 for x in range(10)]
-  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  ```
-- set, dictionary도 이렇게 만들 수 있지만 tuple은 못만듦
-
-  ```py
-  a = {x: x+1 for x in range(10)}
-  # {0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 10}
-  ```
-
-## 9. High-order Function (고차함수)
+## 8. High-order Function (고차함수)
 함수를 인자로 받고, 함수를 리턴할 수 있는 함수
 
 ### (1) map
