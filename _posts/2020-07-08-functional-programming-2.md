@@ -8,7 +8,7 @@ categories:
   - Python
 tags:
   - [Python, Function, Comprehension, Generator, Lambda, Callables, Decorator]
-last_modified_at: 2020-07-08 16:29:25
+last_modified_at: 2020-07-08 16:33:54
 ---
 참고자료: Functional Programming in Python (by. David Mertz)
 
@@ -149,6 +149,7 @@ bar()
 - 인자를 몇 개를 받던지 범용적으로 적용되게 하기 위해 `*t, **s` 사용
 - y.__name__하면 y가 아니라 inner가 나오기 때문에 기능을 변경시키기 위해 다시 decorator를 씀
     - @wraps
+  
 ```py
 from functools import wraps
 
@@ -174,34 +175,35 @@ y(3)
 ### 3중구조
 - 조건을 하나 더 붙일 때 3중구조를 사용
 - `if tt==7 ~`와 같이 사용할 수 있음
-```py
-def outer(tt):
-    def wrapper(func):
-        @wraps(func)
-        def inner(*t, **s):
-            func(*t, **s)
-            print(tt)
-        return inner
-    return wrapper
-```
+    ```py
+    def outer(tt):
+        def wrapper(func):
+            @wraps(func)
+            def inner(*t, **s):
+                func(*t, **s)
+                print(tt)
+            return inner
+        return wrapper
+    ```
+    
+    ```py
+    @outer(tt=7)
+    def y(t):
+        print(t)
 
-```py
-@outer(tt=7)
-def y(t):
-    print(t)
-
-y(3)
-# 3
-# 7
-```
+    y(3)
+    # 3
+    # 7
+    ```
 
 ### 여러 개의 데코레이터 사용
 - 가까운 데코레이터(decorator2)부터 실행되고 그 반환값이 함수이면 다시 위에 있는 데코레이터(decorator1)를 실행하게 된다.
-```py
-@decorator1
-@decorator2
-def ...
-```
+
+    ```py
+    @decorator1
+    @decorator2
+    def ...
+    ```
 
 
 
