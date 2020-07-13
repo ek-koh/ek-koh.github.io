@@ -112,4 +112,56 @@ with plt.xkcd():
     plt.plot([1,2,3,4])
 ```
 
+## 3. Formatting
+
+### `__repr__` vs. `__str__`
+
+`__repr__`은 객체를 부를 때 출력되며, `__str__`은 print를 했을 때 출력된다.
+
+```py
+class X():
+    def __repr__(self):  # 객체를 부를 때 출력
+        return 'A'
+    def __str__(self):    # print 했을 때 출력
+        return 'B'
+
+x = X()
+x # A
+print(x) # B
+```
+
+### Escape Sequences for Special Characters (이스케이프 문자)
+이스케이프 문자는 백슬래시(\)를 사용하여 다음 문자가 특수 문자임을 알릴 수 있다 대표적인 이스케이프 문자는 다음과 같다.
+
+이스케이프 문자 | 뜻
+:--------------:|:------------|
+\b|백스페이스(Backspace)
+\t|탭(Tab)
+\n|개행(Linefeed)
+\\|역슬래시(Backslash)
+\'|작은 따옴표(Single Quote)
+\"|큰 따옴표(Double Quote)
+
+
+### 출력방식 : r, u, b
+r은 raw를 의미하고 u는 unicode, b는 byte를 말한다. 아무것도 붙이지 않을 경우 기본적으로는 unicode가 적용된다.
+
+```py
+a = r'\nabcd\tefgh'
+print(a)
+# \nabcd\tefgh
+
+a = u'\nabcd\tefgh'
+print(a)
+a = '\nabcd\tefgh'
+print(a)
+#
+# abcd	efgh
+
+a = b'\nabcd\tefgh'
+print(a)
+# b'\nabcd\tefgh'
+```
+
+    
 
