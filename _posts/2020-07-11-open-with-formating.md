@@ -1,13 +1,13 @@
 ---
-title:  "Open / With / Formating"
-excerpt: "고급 파이썬 학습: Open / With / Formating"
+title:  "Open / With / Formatting"
+excerpt: "고급 파이썬 학습: Open / With / Formatting"
 toc: true
 toc_sticky: true
 
 categories:
   - Python
 tags:
-  - [Python, Open, With, Formating]
+  - [Python, Open, With, Formatting]
 last_modified_at: 2020-07-11 23:37:14
 ---
 
