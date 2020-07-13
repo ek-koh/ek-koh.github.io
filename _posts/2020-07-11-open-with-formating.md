@@ -134,12 +134,12 @@ print(x) # B
 
 |이스케이프 문자 | 뜻 |
 |:--------------:|:------------|
-|\b|백스페이스(Backspace)|
-|\t|탭(Tab)|
-|\n|개행(Linefeed)|
-|\\|역슬래시(Backslash)|
-|\'|작은 따옴표(Single Quote)|
-|\"|큰 따옴표(Double Quote)|
+|`\b`|백스페이스(Backspace)|
+|`\t`|탭(Tab)|
+|`\n`|개행(Linefeed)|
+|`\\`|역슬래시(Backslash)|
+|`\'`|작은 따옴표(Single Quote)|
+|`\"`|큰 따옴표(Double Quote)|
 
 
 ### 출력방식 : r, u, b
