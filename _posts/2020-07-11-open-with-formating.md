@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - Python
 tags:
-  - [Python, Open, With, Formatting]
+  - [Python, Open, With, Formatting, Escape Sequences]
 last_modified_at: 2020-07-11 23:37:14
 ---
 
@@ -113,7 +113,6 @@ with plt.xkcd():
 ```
 
 ## 3. Formatting
-
 ### `__repr__` vs. `__str__`
 
 `__repr__`은 객체를 부를 때 출력되며, `__str__`은 print를 했을 때 출력된다.
@@ -133,14 +132,14 @@ print(x) # B
 ### Escape Sequences for Special Characters (이스케이프 문자)
 이스케이프 문자는 백슬래시(\)를 사용하여 다음 문자가 특수 문자임을 알릴 수 있다 대표적인 이스케이프 문자는 다음과 같다.
 
-이스케이프 문자 | 뜻
-:--------------:|:------------|
-\b|백스페이스(Backspace)
-\t|탭(Tab)
-\n|개행(Linefeed)
-\\|역슬래시(Backslash)
-\'|작은 따옴표(Single Quote)
-\"|큰 따옴표(Double Quote)
+|이스케이프 문자 | 뜻 |
+|:--------------:|:------------|
+|\b|백스페이스(Backspace)|
+|\t|탭(Tab)|
+|\n|개행(Linefeed)|
+|\\|역슬래시(Backslash)|
+|\'|작은 따옴표(Single Quote)|
+|\"|큰 따옴표(Double Quote)|
 
 
 ### 출력방식 : r, u, b
@@ -163,5 +162,5 @@ print(a)
 # b'\nabcd\tefgh'
 ```
 
-    
+
 
