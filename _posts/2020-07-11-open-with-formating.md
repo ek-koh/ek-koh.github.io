@@ -113,7 +113,8 @@ with plt.xkcd():
 ```
 
 ## 3. Formatting
-### `__repr__` vs. `__str__`
+### 들어가기 전에
+#### (1) `__repr__` vs. `__str__`
 
 `__repr__`은 객체를 부를 때 출력되며, `__str__`은 print를 했을 때 출력된다.
 
@@ -129,7 +130,7 @@ x # A
 print(x) # B
 ```
 
-### 이스케이프 문자
+#### (2) 이스케이프 문자
 이스케이프 문자(Escape Sequences for Special Characters)는 백슬래시(\)를 사용하여 다음 문자가 특수 문자임을 알릴 수 있다 대표적인 이스케이프 문자는 다음과 같다.
 
 |이스케이프 문자 | 뜻 |
@@ -142,7 +143,7 @@ print(x) # B
 |`\"`|큰 따옴표(Double Quote)|
 
 
-### 출력방식 : r, u, b
+#### (3) 출력방식 : r, u, b
 r은 raw를 의미하고 u는 unicode, b는 byte를 말한다. 아무것도 붙이지 않을 경우 기본적으로는 unicode가 적용된다.
 
 ```py
@@ -162,5 +163,78 @@ print(a)
 # b'\nabcd\tefgh'
 ```
 
+### Formatting 방법
+#### (1) Old Style Formatting (% operator)
+
+```py
+errno = 50159747054
+name = '홍길동'
+
+'Hey %s, there is a 0x%x error!' %(name, errno)
+# 'Hey 홍길동, there is a 0xbadc0ffee error!'
+
+'Hey %(name)s, there is a 0x%(errno)x error!' %{'name':name, 'errno':errno}
+# 'Hey 홍길동, there is a 0xbadc0ffee error!'
+```
+
+**출력형식**  
+- `%d`, `%i`: int 값을 부호 있는 10진수로 출력
+- `%u`: int 값을 부호 없는 10진수로 출력
+- `%x`: int 값을 부호 없는 16진수로 출력. 10~15는 'a' ~ 'f'로 표시
+- `%o`: int 값을 부호 없는 8진수로 출력
+- `%s`: 문자열 출력
+- `%f`: double 값을 소수로 출력
+
+#### (2) New Style Formatting (str.format)
+
+```py
+errno = 50159747054
+name = '홍길동'
+age = 30
+
+"Hello, {}. You are {}.".format(name, age)
+# 'Hello, 홍길동. You are 30.'
+
+'Hey {name}, there is a 0x{errno:x} error!'.format(name=name, errno=errno)
+# 'Hey 홍길동, there is a 0xbadc0ffee error!'
+```
+
+위치를 지정할 수도 있다.  
+
+```py
+"Hello, {1}. You are {0}.".format(age, name)
+# 'Hello, 홍길동. You are 30.'
+```
+
+다음과 같은 형태로 집합 형태로 변수를 설정하여 format() 안에 가져올 수도 있다.   
+
+```py
+person = {'name': 'Gildong', 'age': 100}
+"Hello, {name}. You are {age}.".format(name=person['name'], age=person['age'])
+# 'Hello, Gildong. You are 100.'
+
+person = {'name': 'Gildong', 'age': 100}
+"Hello, {name}. You are {age}.".format(**person)
+# 'Hello, Gildong. You are 100.'
+```
+
+
+#### (3) String Interpolation / f-Strings (Python 3.6 이상 지원)
+
+문자열 앞에 'f'나 'F'를 사용하면 된다.  
+
+```py
+a = '홍길동'
+f'{a}' # '홍길동'
+```
+함수를 삽입하는 것도 가능하다.
+
+```py
+def gildong():
+    return '홍길동'
+
+f'{gildong()}은 전래동화 주인공이다.'
+# '홍길동은 전래동화 주인공이다.'
+```
 
 
