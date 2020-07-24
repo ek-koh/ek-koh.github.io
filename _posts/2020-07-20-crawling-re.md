@@ -15,6 +15,7 @@ last_modified_at: 2020-07-20 10:44:05
 ## 1. Crawling
 - **crawler**: spider, bots, web crawler 등 다양한 이름으로 불린다.
 - Web indexing 을 목적으로 한다.
+- 처음 URL 리스트에서 시작해서 하이퍼링크들을 찾고 fetching 한다. 
 
 ## 2. BeautifulSoup vs. Scrapy
 - BeautifulSoup: Parsing 목적
