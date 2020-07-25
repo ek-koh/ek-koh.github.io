@@ -50,20 +50,55 @@ last_modified_at: 2020-07-20 10:44:05
 - `()` : Grouping
 
 ### (2) Greedy vs. Lazy
-- Greedy: 가능한 마지막 매치를 찾는다.
-- Lazy: 가능한 첫번째 매치를 찾는다.
+- Greedy quantifier(탐욕적 수량자)
+  - 가능한 한 가장 큰 덩어리를 찾기 위해 텍스트 마지막에서 시작해 찾는다.
+  - `*`, `+`, `{n,}`이 여기에 해당한다.
+  - Ex) `python <b>AB</b> and <b>CD</b>` -> 정규표현식 `<[Bb]>.*<\/[Bb]>` -> `<b>AB</b> and <b>CD</b>`
+- Lazy quantifier(게으른 수량자)
+  - 가능한 한 최소로 일치하게 만든다.
+  - 기존 수량자 뒤에 `?`를 붙여 표현한다.
+  - `*?`, `+?`, `{n,}?`
+  - Ex) `python <b>AB</b> and <b>CD</b>` -> 정규표현식 `<[Bb]>.*?<\/[Bb]>` -> `<b>AB</b>`, `<b>CD</b>`
 
-### (3) re
+### (3) 파이썬 re 모듈
+파이썬에서 정규표현식을 지원하기 위해 제공하는 모듈이다.  
+
 ```py
 import re
 ```
-- re.match()
-  - 문자열의 처음부터 정규식과 매치하는지 조사
-- re.search()
-  - 문자열 전체를 검색해 정규식과 매치되는지 조사
-- re.findall()
-  - 정규식과 매치되는 모든 문자열(substring)을 리스트로 반환
-- re.finditer()
-  - 정규식과 매치되는 모든 문자열(substring)을 반복 가능한 객체로 반환
 
-  
+#### compile
+```py
+p = re.compile('정규표현식')
+```
+
+- `re.compile()`
+  - 정규표현식을 컴파일한다.
+  - 컴파일 결과로 돌려주는 객체를 사용하며 match(), search(), findall(), finditer() 작업을 수행할 수 있다.
+  - 정규식을 컴파일한 결과를 **패턴**이라고 한다.
+
+#### match, search, findall, finditer, sub
+- `re.match()`
+  - 문자열의 처음부터 정규식과 매치하는지 조사
+  - 정규식과 매치되면 match 객체를, 매치되지 않으면 None을 반환한다.
+- `re.search()`
+  - 문자열 전체를 검색해 정규식과 매치되는지 조사
+  - 정규식과 매치되면 match 객체를, 매치되지 않으면 None을 반환한다.  
+- `re.findall()`
+  - 정규식과 매치되는 모든 문자열(substring)을 리스트로 반환
+- `re.finditer()`
+  - 정규식과 매치되는 모든 문자열(substring)을 반복 가능한 객체로 반환
+- `re.sub()`
+  - 문자열에서 패턴과 매치하는 텍스트를 주어진 형태로 치환한다.
+
+#### match 객체의 메서드
+match 객체는 re.match(), re.search()의 결과로 반환된 객체이다.  
+
+- `group()`
+  - 매치된 문자열을 반환
+- `start()`
+  - 매치된 문자열의 시작 위치 반환
+- `end()`
+  - 매치된 문자열의 끝 위치 반환
+- `span()`
+  - 매치된 문자열의 (시작, 끝)을 나타내는 튜플 반환
