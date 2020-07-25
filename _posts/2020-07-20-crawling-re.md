@@ -53,12 +53,18 @@ last_modified_at: 2020-07-20 10:44:05
 - Greedy quantifier(탐욕적 수량자)
   - 가능한 한 가장 큰 덩어리를 찾기 위해 텍스트 마지막에서 시작해 찾는다.
   - `*`, `+`, `{n,}`이 여기에 해당한다.
-  - Ex) `python <b>AB</b> and <b>CD</b>` -> 정규표현식 `<[Bb]>.*<\/[Bb]>` -> `<b>AB</b> and <b>CD</b>`
+
 - Lazy quantifier(게으른 수량자)
   - 가능한 한 최소로 일치하게 만든다.
   - 기존 수량자 뒤에 `?`를 붙여 표현한다.
   - `*?`, `+?`, `{n,}?`
-  - Ex) `python <b>AB</b> and <b>CD</b>` -> 정규표현식 `<[Bb]>.*?<\/[Bb]>` -> `<b>AB</b>`, `<b>CD</b>`
+
+  
+|Greedy / Lazy|Greedy|Lazy|
+|:---:|:---:|:---:|
+|예시|`python <b>AB</b> and <b>CD</b>`|
+|정규표현식|`<[Bb]>.*<\/[Bb]>`|`<[Bb]>.*?<\/[Bb]>`|
+|결과값|`<b>AB</b> and <b>CD</b>`|`<b>AB</b>`, `<b>CD</b>`|  
 
 ### (3) 파이썬 re 모듈
 파이썬에서 정규표현식을 지원하기 위해 제공하는 모듈이다.  
@@ -74,7 +80,7 @@ p = re.compile('정규표현식')
 
 - `re.compile()`
   - 정규표현식을 컴파일한다.
-  - 컴파일 결과로 돌려주는 객체를 사용하며 match(), search(), findall(), finditer() 작업을 수행할 수 있다.
+  - 컴파일 결과로 돌려주는 객체를 사용해 match(), search(), findall(), finditer() 작업을 수행할 수 있다.
   - 정규식을 컴파일한 결과를 **패턴**이라고 한다.
 
 #### match, search, findall, finditer, sub
