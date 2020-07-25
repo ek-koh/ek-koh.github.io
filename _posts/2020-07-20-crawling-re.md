@@ -36,9 +36,17 @@ last_modified_at: 2020-07-20 10:44:05
 - `{}` : Specified number of occurrences
 - `[]` : Check any single character
 - `[-]` : Range of characters
+  - `[A-Z]`: ABCD...Z
+  - `[a-z]`: abcd...z
+  - `[ㄱ-ㅎ]`: 자음
+  - `[ㅏ-ㅣ]`: 모음
+  - `[가-힣]`: 음절
+
 - `[^]` : Negation
 - `^` : Beginning of string
+  - ^x : SQL에서의 x%와 같다.
 - `$` : End of string
+  - x$: SQL에서의 %x와 같다.
 - `()` : Grouping
 
 ### (2) Greedy vs. Lazy
@@ -48,8 +56,14 @@ last_modified_at: 2020-07-20 10:44:05
 ### (3) re
 ```py
 import re
-
-re.search() # 가장 많이 쓰는 것
 ```
+- re.match()
+  - 문자열의 처음부터 정규식과 매치하는지 조사
+- re.search()
+  - 문자열 전체를 검색해 정규식과 매치되는지 조사
+- re.findall()
+  - 정규식과 매치되는 모든 문자열(substring)을 리스트로 반환
+- re.finditer()
+  - 정규식과 매치되는 모든 문자열(substring)을 반복 가능한 객체로 반환
 
-
+  
