@@ -1,5 +1,5 @@
 ---
-title:  "추천 시스템"
+title:  "추천 시스템 - Contents Based Filtering, Collaborative Filtering, Hybrid Filtering"
 excerpt: "Contents Based Filtering, Collaborative Filtering 등 기본적인 추천 시스템 구현 방법론의 특징 및 장단점에 대해 정리한 글입니다."
 
 categories:
@@ -27,7 +27,7 @@ last_modified_at: 2020-08-20 00:51:59
 
 여기에서는 비슷한 패턴을 가진 사용자나 항목을 추출할 수 있는 행렬분해, kNN 등의 기술이 핵심이 된다. 하지만 이 방법은 새로운 콘텐츠에 대한 추천이 어려워지거나 과거 활동 데이터가 없는 신규 유저의 경우 추천의 정확도가 떨어지는 Cold Start 문제, 사용자들의 관심이 적은 다수의 항목이 추천을 위한 충분한 정보를 제공하지 못하는 Long Tail 문제가 발생할 수 있다.  
 
-> Cold Start에는 아이템 콜드 스타트, 이용자 콜드 스타트, 시스템 콜드 스타트가 있다. 
+Cold Start에 대해 좀 더 자세히 알아보자면, Cold Start에는 아이템 콜드 스타트, 이용자 콜드 스타트, 시스템 콜드 스타트가 있다. 
 
 - 아이템 콜드 스타트 (Item Cold Start)  
 새로운 콘텐츠가 제공됐을 때 충분한 수의 이용자가 새로운 콘텐츠를 소비하기 전에는 해당 콘텐츠가 추천되지 않음을 뜻하며, 새 콘텐츠가 추천 시스템에 신규 인입됐을 때 발생한다. 이 문제를 해결하기 위해서는 각 아이템의 콘텐츠 정보를 활용해볼 수 있을 것이다.
