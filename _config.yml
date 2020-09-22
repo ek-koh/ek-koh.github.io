@@ -118,10 +118,6 @@ author:
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
-# Fallback image and color
-image: /assets/img/pexels-photo.jpeg
-color: '#4f86aa'
-
 # Site Footer
 footer:
   links:
