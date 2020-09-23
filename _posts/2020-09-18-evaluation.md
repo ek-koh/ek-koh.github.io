@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - Data Analysis
 tags:
-  - [Data Analysis, Machine Learning, Classification, Evaluation, Confusion Matrix, Accuracy, Precision, Recall]
+  - [Data Analysis, Machine Learning, Scikit learn, Classification, Evaluation, Confusion Matrix, Accuracy, Precision, Recall]
 last_modified_at: 2020-09-18 19:15:33
 ---
 
