@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - Data Analysis
 tags:
-  - [Data Analysis, Machine Learning, Scikit learn, Classification, Evaluation, Precision, Recall, Threshold, Binarizer]
+  - [Data Analysis, Machine Learning, Scikit learn, Metrics, Classification, Evaluation, Precision, Recall, Threshold, Binarizer]
 last_modified_at: 2020-09-19 22:57:38
 ---
 
