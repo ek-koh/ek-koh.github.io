@@ -72,6 +72,7 @@ print(recall_score(y_test, custom_predict))
 for 문을 사용해 확인하지 않더라도 사이킷런의 `precision_recall_curve()` API를 사용하면 임계값 변화에 따른 정밀도와 재현율의 트레이드오프 관계를 더욱 쉽게 확인할 수 있다.  
 
 ```py
+from sklearn.metrics import precision_recall_curve
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 %matplotlib inline
