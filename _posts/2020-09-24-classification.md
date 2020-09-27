@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - Data Analysis
 tags:
-  - [Data Analysis, Machine Learning, classification]
+  - [Data Analysis, Machine Learning, Classification]
 last_modified_at: 2020-09-24 22:43:35
 ---
 
