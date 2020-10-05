@@ -86,6 +86,13 @@ rf_clf1 = RandomForestClassifier(n_estimators=300, max_depth=4, min_samples_leaf
 rf_clf1.fit(X_train, y_train)
 pred = rf_clf1.predict(X_test)
 print('예측 정확도: {0:.4f}'.format(accuracy_score(y_test, pred))) # 0.9474
+```  
+
+RandomForestClassifier도 DecisionTreeClassifier처럼 `feature_importances_` 속성을 사용해 알고리즘이 선택한 피처 중요도를 확인할 수 있다.  
+
+```py
+for name, value in zip(cancer.feature_names, rf_clf1.feature_importances_):
+    print('{0} : {1:.3f}'.format(name, value))
 ```
 
 
