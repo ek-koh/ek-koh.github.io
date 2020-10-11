@@ -5,9 +5,9 @@ toc: true
 toc_sticky: true
 
 categories:
-  - Preprocessing
+  - Data Analysis
 tags:
-  - [Preprocessing, Text, NLTK, KoNLPy, Empirical Law]
+  - [Data Analysis, Preprocessing, Text, NLTK, KoNLPy, Empirical Law]
 last_modified_at: 2020-07-24 13:55:44
 ---
 
