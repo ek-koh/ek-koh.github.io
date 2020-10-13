@@ -1,5 +1,5 @@
 ---
-title:  "머신러닝 앙상블 학습(Ensemble Learning) - 배깅(Bagging)"
+title:  "머신러닝 앙상블 학습(Ensemble Learning) - 배깅(Bagging) : 랜덤포레스트(Random Forest)"
 excerpt: "앙상블 학습 방식 중 하나인 배깅(Bagging)의 대표적인 알고리즘 랜덤포레스트(Random Forest)에 대해 정리한 글입니다."
 toc: true
 toc_sticky: true
