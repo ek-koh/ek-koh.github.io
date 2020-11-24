@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - R
 tags:
-  - [R, Data Analysis]
+  - [R, Data Analysis, Preprocessing]
 last_modified_at: 2020-11-23 18:09:04
 ---
 
