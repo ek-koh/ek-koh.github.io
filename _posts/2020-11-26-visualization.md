@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - R
 tags:
-  - [R, Data Analysis, Visualiztion]
+  - [R, Data Analysis, Visualization]
 last_modified_at: 2020-11-26 21:25:34
 ---
 
