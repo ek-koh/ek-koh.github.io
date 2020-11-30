@@ -59,7 +59,18 @@ plot(weather$Temp_mean, weather$Humidity,
 - main : 그래프 제목
 - col : 그래프 색깔
 - cex : 점의 크기
-- pch : 점의 모양
+- pch : 점의 모양  
+
+위의 예시에서는 x, y 모두 숫자형이었기 때문에 자동으로 산점도가 그려졌다. 하지만 만약 여기서 x 변수에 factor가 들어가게 되면 자동으로 그려지는 것은 boxplot이 된다.   
+
+```r
+plot(factor(weather$year), weather$Humidity,
+     xlab="Year", ylab="HUmidity",
+     main="Boxplot")
+```  
+
+![image](https://user-images.githubusercontent.com/58713684/100597779-303b1000-3341-11eb-9971-7a6d7ed0adb3.png)  
+
 
 
 ## 2. 그래프 새 창 띄우기  
