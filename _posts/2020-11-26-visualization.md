@@ -65,7 +65,7 @@ plot(weather$Temp_mean, weather$Humidity,
 
 ```r
 plot(factor(weather$year), weather$Humidity,
-     xlab="Year", ylab="HUmidity",
+     xlab="Year", ylab="Humidity",
      main="Boxplot")
 ```  
 
