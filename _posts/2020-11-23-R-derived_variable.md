@@ -42,3 +42,24 @@ weather$year <- substr(weather$Date,1,4)
 ```  
 
 Date 데이터가 int형이더라도 `substr()`함수를 사용해서 year 변수를 생성할 수 있다. 이렇게 생성된 year변수는 character형이 된다.  
+
+R의 lubridate 패키지를 이용하면 날짜 데이터를 보다 쉽게 처리할 수 있다. 먼저 lubridate를 설치하고 불러와보자.   
+
+```r
+install.packages("lubridate")
+library(lubridate)
+```  
+
+lubridate의 `ymd()`를 사용하면 문자나 숫자로 된 날짜 데이터를 Date타입으로 바꿀 수 있다. 그 후, `year()`, `month()`, `day()`함수로 쉽게 연/월/일을 추출해낼 수 있다.  
+
+```r
+sam <- c("20201110", "20201111") # 숫자형도 가능
+str(sam) # chr [1:2] "20201110" "20201111"
+sam <- ymd(sam)
+str(sam) # Date[1:2], format: "2020-11-10" "2020-11-11"
+
+year(sam) # 2020 2020
+month(sam) # 11 11
+day(sam) # 10 11
+```   
+
