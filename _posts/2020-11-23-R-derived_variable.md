@@ -43,7 +43,7 @@ weather$year <- substr(weather$Date,1,4)
 
 Date 데이터가 int형이더라도 `substr()`함수를 사용해서 year 변수를 생성할 수 있다. 이렇게 생성된 year변수는 character형이 된다.  
 
-R의 lubridate 패키지를 이용하면 날짜 데이터를 보다 쉽게 처리할 수 있다. 먼저 lubridate를 설치하고 불러와보자.   
+R의 lubridate 패키지를 이용하면 날짜 데이터를 보다 쉽게 처리할 수 있다. 먼저 lubridate 패키지를 설치하고 불러와보자.   
 
 ```r
 install.packages("lubridate")
