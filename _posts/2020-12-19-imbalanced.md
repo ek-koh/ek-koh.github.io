@@ -1,5 +1,5 @@
 ---
-title:  "불균형 데이터로 머신러닝 수행하기 - 언더 샘플링, 오버 샘플링"
+title:  "불균형 데이터로 머신러닝 수행하기 - 언더 샘플링(Undersampling), 오버 샘플링(Oversampling)"
 excerpt: "머신러닝에서 불균형한 데이터로 학습을 하는 방법에 대해 정리한 글입니다."
 toc: true
 toc_sticky: true
