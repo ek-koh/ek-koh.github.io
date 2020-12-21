@@ -7,7 +7,7 @@ toc_sticky: true
 categories:
   - R
 tags:
-  - [Data Analysis, Machine Learning, Classification, Scikit learn, Imbalanced Data, SMOTE]
+  - [Data Analysis, Machine Learning, Classification, Imbalanced Data, SMOTE]
 last_modified_at: 2020-12-19 12:28:33
 ---
 
