@@ -5,7 +5,7 @@ toc: true
 toc_sticky: true
 
 categories:
-  - R
+  - Data Analysis
 tags:
   - [Data Analysis, Machine Learning, Classification, Imbalanced Data, SMOTE]
 last_modified_at: 2020-12-19 12:28:33
