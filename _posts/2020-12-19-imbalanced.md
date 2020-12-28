@@ -43,6 +43,6 @@ X_train_over, y_train_over = smote.fit_sample(X_train, y_train)
 이렇게 오버샘플링한 train 데이터로 학습을 시킨 후 SMOTE를 적용하지 않은 테스트 데이터로 예측을 수행하면 된다.
 
 
-## + 불균형 데이터로 LightGBM 수행하기  
+## + 불균형 데이터로 LightGBM 적용하기  
 
 레이블 값이 극도로 불균형한 분포를 이루는 경우 LightGBM의 `boost_from_average=False`로 파라미터를 설정해야 한다. 이렇게 하지 않고 True 설정이 되어 있으면 재현율과 ROC-AUC 성능이 저하될 수 있다.  
